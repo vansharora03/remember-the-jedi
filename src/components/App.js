@@ -48,6 +48,10 @@ function App() {
     setScore(score + 1);
   }
 
+  const resetScore = () => {
+    setScore(0)
+  }
+
   useEffect(() => {
     if(score > bestScore) {
       setBestScore(score);
@@ -71,7 +75,7 @@ function App() {
         <div className="score" id="score">Score : {score}</div>
         <div className="score" id="best-score">Best Score : {bestScore}</div>
       </div>
-      <CardView cards={cards} randomizeCards={randomizeCards} incrementScore={incrementScore}/>
+      <CardView cards={cards} randomizeCards={randomizeCards} incrementScore={incrementScore} resetScore={resetScore}/>
     </div>
   );
 }
