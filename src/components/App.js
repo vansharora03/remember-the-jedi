@@ -67,8 +67,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className="score" id="score">Score : {score}</div>
-      <div className="score" id="best-score">Best Score : {bestScore}</div>
+      <div className="scoreboard">
+        <div className="score" id="score">Score : {score}</div>
+        <div className="score" id="best-score">Best Score : {bestScore}</div>
+      </div>
       <CardView cards={cards} randomizeCards={randomizeCards} incrementScore={incrementScore}/>
     </div>
   );
