@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CardView(props) {
     //destructure props
-    const [cards, randomizeCards, incrementScore, resetScore] = props;
+    const {cards, randomizeCards, incrementScore, resetScore} = props;
 
     //map the cards props to renderable JSX elements
     const cardsToJSX = cards.map(card => {
