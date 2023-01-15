@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import CardView from "./CardView";
 
@@ -43,6 +43,19 @@ function App() {
      description: ""},
   ])
 
+
+  const incrementScore = () => {
+    setScore(score + 1);
+  }
+
+  useEffect(() => {
+    if(score > bestScore) {
+      setBestScore(score);
+    }
+  }, [score, bestScore])
+
+
+
   const randomizeCards = () => {
     const randomized = cards.slice();
     for(let i = randomizeCards.length - 1; i > 0; i--) {
@@ -56,7 +69,7 @@ function App() {
     <div className="App">
       <div className="score" id="score">Score : {score}</div>
       <div className="score" id="best-score">Best Score : {bestScore}</div>
-      <CardView />
+      <CardView cards={cards} randomizeCards={randomizeCards} incrementScore={incrementScore}/>
     </div>
   );
 }
