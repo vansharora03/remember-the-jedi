@@ -42,6 +42,15 @@ function App() {
      description: ""},
   ])
 
+  const randomizeCards = () => {
+    const randomized = cards.slice();
+    for(let i = randomizeCards.length - 1; i > 0; i--) {
+      const rand = Math.floor(Math.random() * (i + 1));
+      [randomized[i], randomized[rand]] = [randomized[rand], randomized[i]]
+    }
+    setCards(randomized);
+  }
+
   return (
     <div className="App">
       <div className="score" id="score">Score : {score}</div>
