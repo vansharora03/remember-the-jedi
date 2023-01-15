@@ -42,7 +42,7 @@ function App() {
      they're always memorable."`,
      picked: false},
      {name: "Boba Fett",
-     imgSrc : "assets/card-images/bob-fett.png",
+     imgSrc : "assets/card-images/boba-fett.png",
      description: `"Jabba ruled with fear. I intend to rule with respect."`,
      picked: false},
      {name: "Chewbacca",
