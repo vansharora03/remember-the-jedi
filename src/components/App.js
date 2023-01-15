@@ -107,6 +107,7 @@ function App() {
   //render App
   return (
     <div className="App">
+      <h1 className="App-title">Remember the Jedi</h1>
       <div className="scoreboard">
         <div className="score" id="score">Score : {score}</div>
         <div className="score" id="best-score">Best Score : {bestScore}</div>
