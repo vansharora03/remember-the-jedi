@@ -14,44 +14,44 @@ function App() {
   //each card has a name, imgSrc, description,
   //and whether or not the card was picked
   const [cards, setCards] = useState([
-    {name: "",
-     imgSrc : "",
+    {name: "1",
+     imgSrc : "1",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "2",
+     imgSrc : "2",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "3",
+     imgSrc : "3",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "4",
+     imgSrc : "4",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "5",
+     imgSrc : "5",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "6",
+     imgSrc : "6",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "7",
+     imgSrc : "7",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "8",
+     imgSrc : "8",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "9",
+     imgSrc : "9",
      description: "",
      picked: false},
-     {name: "",
-     imgSrc : "",
+     {name: "10",
+     imgSrc : "10",
      description: "",
      picked: false},
   ])
@@ -63,7 +63,9 @@ function App() {
     const newCards = cards.map(card => {
       if(card.name === pickedCard.name) {
         return {
-          ...card,
+          name: card.name,
+          imgSrc: card.imgSrc,
+          description: card.description,
           picked: true
         }
       }
@@ -78,7 +80,9 @@ function App() {
   const resetScore = () => {
     const newCards = cards.map(card => {
       return {
-        ...card,
+        name: card.name,
+        imgSrc: card.imgSrc,
+        description: card.description,
         picked: false
       }
     })
@@ -98,7 +102,7 @@ function App() {
   //randomize the array of cards and set state
   const randomizeCards = () => {
     const randomized = cards.slice();
-    for(let i = randomizeCards.length - 1; i > 0; i--) {
+    for(let i = randomized.length - 1; i > 0; i--) {
       const rand = Math.floor(Math.random() * (i + 1));
       [randomized[i], randomized[rand]] = [randomized[rand], randomized[i]]
     }
