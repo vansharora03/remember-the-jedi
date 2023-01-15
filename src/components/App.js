@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import CardView from "./CardView";
+import '../styles/styles.css'
 
 //This is the master component
 function App() {
