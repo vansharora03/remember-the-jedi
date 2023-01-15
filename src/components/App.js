@@ -62,12 +62,7 @@ function App() {
   const incrementScore = (pickedCard) => {
     const newCards = cards.map(card => {
       if(card.name === pickedCard.name) {
-        return {
-          name: card.name,
-          imgSrc: card.imgSrc,
-          description: card.description,
-          picked: true
-        }
+        card.picked = true;
       }
       return card
     })
@@ -79,12 +74,8 @@ function App() {
   //set picked to false for all cards
   const resetScore = () => {
     const newCards = cards.map(card => {
-      return {
-        name: card.name,
-        imgSrc: card.imgSrc,
-        description: card.description,
-        picked: false
-      }
+      card.picked = false;
+      return card;
     })
     setCards(newCards);
     setScore(0)
