@@ -3,6 +3,7 @@ html {
     margin: none;
     background-color: #171717;
     color: #e4e4e7;
+    user-select: none;
 }
 
 
@@ -49,4 +50,12 @@ html {
     width: 220px;
     height: 310px;
     border-radius: 10px;
+    position: relative;
+    transition: 300ms
+}
+
+.card:hover img {
+    width: 102%;
+    height: 102%;
+    box-shadow: 1px 1px 2px 2px #fef08a;
 }
