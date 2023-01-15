@@ -19,7 +19,7 @@ export default function CardView(props) {
             //regardless, randomize the cards
             randomizeCards()
         }} className="card" key={`card-${card.imgSrc}`}>
-            <img className="card-image" key={`img-${card.imgSrc}`} alt={card.name}></img>
+            <img src={card.imgSrc} className="card-image" key={`img-${card.imgSrc}`} alt={card.name}></img>
             <div className="card-name" key={`card-${card.name}`}>{card.name}</div>
             <div className="card-description" key={`card-${card.description}`}>{card.description}</div>
         </div>)
