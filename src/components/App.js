@@ -11,48 +11,78 @@ function App() {
   const [bestScore, setBestScore] = useState(0)
 
   //state to store the array of cards
-  //each card has a name, imgSrc, and description
+  //each card has a name, imgSrc, description,
+  //and whether or not the card was picked
   const [cards, setCards] = useState([
     {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
      {name: "",
      imgSrc : "",
-     description: ""},
+     description: "",
+     picked: false},
   ])
 
 
-  //raise the score by one
-  const incrementScore = () => {
+  //raise the score by one and set 
+  //chosen card.picked to true
+  const incrementScore = (pickedCard) => {
+    const newCards = cards.map(card => {
+      if(card.name === pickedCard.name) {
+        return {
+          ...card,
+          picked: true
+        }
+      }
+      return card
+    })
+    setCards(newCards);
     setScore(score + 1);
   }
 
-  //reset the score to 0 upon losing
+  //reset the score to 0 upon losing and 
+  //set picked to false for all cards
   const resetScore = () => {
+    const newCards = cards.map(card => {
+      return {
+        ...card,
+        picked: false
+      }
+    })
+    setCards(newCards);
     setScore(0)
   }
 
