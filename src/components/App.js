@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import CardView from "./CardView";
 
 function App() {
   //state to store the current score
@@ -55,6 +56,7 @@ function App() {
     <div className="App">
       <div className="score" id="score">Score : {score}</div>
       <div className="score" id="best-score">Best Score : {bestScore}</div>
+      <CardView />
     </div>
   );
 }
