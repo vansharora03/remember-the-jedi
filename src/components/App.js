@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import CardView from "./CardView";
 
+//This is the master component
 function App() {
   //state to store the current score
   const [score, setScore] = useState(0)
@@ -10,6 +11,7 @@ function App() {
   const [bestScore, setBestScore] = useState(0)
 
   //state to store the array of cards
+  //each card has a name, imgSrc, and description
   const [cards, setCards] = useState([
     {name: "",
      imgSrc : "",
@@ -44,14 +46,17 @@ function App() {
   ])
 
 
+  //raise the score by one
   const incrementScore = () => {
     setScore(score + 1);
   }
 
+  //reset the score to 0 upon losing
   const resetScore = () => {
     setScore(0)
   }
 
+  //update bestScore when score is higher
   useEffect(() => {
     if(score > bestScore) {
       setBestScore(score);
@@ -60,6 +65,7 @@ function App() {
 
 
 
+  //randomize the array of cards and set state
   const randomizeCards = () => {
     const randomized = cards.slice();
     for(let i = randomizeCards.length - 1; i > 0; i--) {
@@ -69,6 +75,7 @@ function App() {
     setCards(randomized);
   }
 
+  //render App
   return (
     <div className="App">
       <div className="scoreboard">
