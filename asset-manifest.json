@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/remember-the-jedi/static/css/main.f65029c2.css",
+    "main.js": "/remember-the-jedi/static/js/main.8cd854bb.js",
+    "index.html": "/remember-the-jedi/index.html",
+    "main.f65029c2.css.map": "/remember-the-jedi/static/css/main.f65029c2.css.map",
+    "main.8cd854bb.js.map": "/remember-the-jedi/static/js/main.8cd854bb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f65029c2.css",
+    "static/js/main.8cd854bb.js"
+  ]
+}
